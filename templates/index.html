@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang = "em">
+    <head>
+        <title>Youtube to MP3/MP4 converter</title>
+        <meta charset ="utf-8">
+        <meta name ="description" content = "Converting and downloading your youtube link ... making your life easier ">
+
+        <!--CSS file link-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"><link href = "/static/style.css" type ="text/css" rel ="stylesheet">
+
+    </head>
+
+    <body>
+        <h1>Welcome to Youtube to MP3/MP4 converter!</h1>
+        <section>
+            <div class= "main">
+                <h2>Please paste the youtube link below:</h2>
+                <div>
+                    <label for="url">Enter Youtube URL:</label>
+                    <input type = "text" id ="url" name = "url" required>
+                    <button>Convert</button>
+                    <div id="downloadLink"></div>
+                </div>
+                <p><strong>Select Format and Quality of the video:</strong></p>
+                <div>
+                    <select>
+                        <option value = "MP3">MP3</option>
+                        <option value = "MP4">MP4</option>
+                    </select>
+                    <select>
+                        <option value = "144p">144p</option>
+                        <option value = "240p">240p</option>
+                        <option value = "360p">360p</option>
+                        <option value = "480p">480p</option>
+                        <option value = "1080p">1080p</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </body>
+</html>
